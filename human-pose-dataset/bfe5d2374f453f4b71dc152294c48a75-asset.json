@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "jpg",
+        "id": "bfe5d2374f453f4b71dc152294c48a75",
+        "name": "073280154_thumb.jpg",
+        "path": "file:C:/Users/mdhsi/OneDrive/Documents/CE%20258%20-%20Deep%20Learning/pedestrian-behavior-analysis/human-pose-dataset/073280154_thumb.jpg",
+        "size": {
+            "width": 150,
+            "height": 100
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "qGueycIiB",
+            "type": "RECTANGLE",
+            "tags": [
+                "walking"
+            ],
+            "boundingBox": {
+                "height": 35.12014787430684,
+                "width": 21.208377184321055,
+                "left": 57.02836757523505,
+                "top": 43.068394687391695
+            },
+            "points": [
+                {
+                    "x": 57.02836757523505,
+                    "y": 43.068394687391695
+                },
+                {
+                    "x": 78.2367447595561,
+                    "y": 43.068394687391695
+                },
+                {
+                    "x": 78.2367447595561,
+                    "y": 78.18854256169854
+                },
+                {
+                    "x": 57.02836757523505,
+                    "y": 78.18854256169854
+                }
+            ]
+        }
+    ],
+    "version": "2.2.0"
+}

@@ -1,0 +1,79 @@
+{
+    "asset": {
+        "format": "jpg",
+        "id": "a33a85c173a981a1ab99f1f0bd3eeb2e",
+        "name": "014795833_thumb.jpg",
+        "path": "file:C:/Users/mdhsi/OneDrive/Documents/CE%20258%20-%20Deep%20Learning/pedestrian-behavior-analysis/human-pose-dataset/014795833_thumb.jpg",
+        "size": {
+            "width": 150,
+            "height": 100
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "fr-QqV6cB",
+            "type": "RECTANGLE",
+            "tags": [
+                "standing"
+            ],
+            "boundingBox": {
+                "height": 99.32224323040016,
+                "width": 41.98520345252774,
+                "left": 93.403205918619,
+                "top": 0.6777567695998441
+            },
+            "points": [
+                {
+                    "x": 93.403205918619,
+                    "y": 0.6777567695998441
+                },
+                {
+                    "x": 135.38840937114674,
+                    "y": 0.6777567695998441
+                },
+                {
+                    "x": 135.38840937114674,
+                    "y": 100
+                },
+                {
+                    "x": 93.403205918619,
+                    "y": 100
+                }
+            ]
+        },
+        {
+            "id": "6gbGh8K6q",
+            "type": "RECTANGLE",
+            "tags": [
+                "standing"
+            ],
+            "boundingBox": {
+                "height": 100,
+                "width": 56.35017743093018,
+                "left": 2.651055614692509,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 2.651055614692509,
+                    "y": 0
+                },
+                {
+                    "x": 59.00123304562269,
+                    "y": 0
+                },
+                {
+                    "x": 59.00123304562269,
+                    "y": 100
+                },
+                {
+                    "x": 2.651055614692509,
+                    "y": 100
+                }
+            ]
+        }
+    ],
+    "version": "2.2.0"
+}
