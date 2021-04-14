@@ -1,9 +1,45 @@
+'''
+********************************************************************
+*                                                                  
+* References: 
+* https://github.com/theAIGuysCode/tensorflow-yolov4-tflite
+* https://blog.insightdatascience.com/how-to-train-your-own-yolov3-detector-from-scratch-224d10e55de2
+* https://github.com/AntonMu/TrainYourOwnYOLO
+* http://human-pose.mpi-inf.mpg.de/#dataset
+*
+* Notes:
+* utils.py added new functions to get ROI       
+********************************************************************
+'''
+
 import cv2
 import random
 import colorsys
 import numpy as np
 import tensorflow as tf
 from core.config import cfg
+
+# START new functions
+'''
+Create a ROI image cropped from given image using OpenCV and bounding box coordinates
+precondition: ROI_FOLDER exists
+img: Original image
+x_min: xmin from box coordinates
+x_max: xmax from box coordinates
+y_max: ymax from box coordinates
+ROI_number: ROI image name number
+'''
+def save_bounding_box_image(img, x_min, y_min, x_max, y_max, ROI_FOLDER, ROI_number):
+  x = x_min
+  y = y_min
+  w = x_max - x_min
+  h = y_max - y_min
+  ROI = img[y:y+h, x:x+w]
+  # Save ROI image
+  roi_path = ROI_FOLDER + "/ROI_{}.png".format(ROI_number)
+  cv2.imwrite(roi_path, ROI)
+  print("saved " + roi_path)
+# END new functions
 
 def load_freeze_layer(model='yolov4', tiny=False):
     if tiny:
@@ -125,6 +161,11 @@ def image_preprocess(image, target_size, gt_boxes=None):
         return image_paded, gt_boxes
 
 def draw_bbox(image, bboxes, classes=read_class_names(cfg.YOLO.CLASSES), allowed_classes=list(read_class_names(cfg.YOLO.CLASSES).values()), show_label=True):
+    # variables used by save_bounding_box_image()
+    # pedestrian-behavior-analysis/rois/
+    ROI_FOLDER = "../rois"
+    ROI_number = 0
+    
     num_classes = len(classes)
     image_h, image_w, _ = image.shape
     hsv_tuples = [(1.0 * x / num_classes, 1., 1.) for x in range(num_classes)]
@@ -159,6 +200,10 @@ def draw_bbox(image, bboxes, classes=read_class_names(cfg.YOLO.CLASSES), allowed
             cv2.rectangle(image, c1, c2, bbox_color, bbox_thick)
 
             if show_label:
+                # save box images
+                save_bounding_box_image(image, int(coor[1]), int(coor[0]), int(coor[3]), int(coor[2]), ROI_FOLDER, ROI_number) 
+                ROI_number += 1
+                
                 bbox_mess = '%s: %.2f' % (classes[class_ind], score)
                 t_size = cv2.getTextSize(bbox_mess, 0, fontScale, thickness=bbox_thick // 2)[0]
                 c3 = (c1[0] + t_size[0], c1[1] - t_size[1] - 3)

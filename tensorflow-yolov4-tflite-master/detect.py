@@ -92,7 +92,7 @@ def main(_argv):
         allowed_classes = list(class_names.values())
         
         # custom allowed classes (uncomment line below to allow detections for only people)
-        #allowed_classes = ['person']
+        allowed_classes = ['person']
 
         image = utils.draw_bbox(original_image, pred_bbox, allowed_classes = allowed_classes)
 
