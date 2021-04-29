@@ -1,0 +1,19 @@
+##### Training YOLOv3
+
+# make sure in right folder and activate virtual environment first
+cd TrainYourOwnYOLO
+conda activate yolov3-env
+
+# convert the VoTT csv format to the YOLOv3 format
+cd 1_Image_Annotation
+python Convert_to_YOLO_format.py
+
+cd ..
+cd 2_Training
+python Download_and_Convert_YOLO_weights.py
+python Train_YOLO.py 
+
+# finished training, now make predictions
+cd ..
+cd 3_Inference
+python Detector.py

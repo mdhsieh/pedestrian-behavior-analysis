@@ -1,0 +1,4 @@
+image,image_path,xmin,ymin,xmax,ymax,label,confidence,x_size,y_size
+ROI_1.png,C:\Users\mdhsi\OneDrive\Documents\Github\CMPE_258_Group_Project\TrainYourOwnYOLO\Data\Source_Images\Test_Images\ROI_1.png,101,57,146,197,1,0.5373357534408569,250,250
+ROI_2.png,C:\Users\mdhsi\OneDrive\Documents\Github\CMPE_258_Group_Project\TrainYourOwnYOLO\Data\Source_Images\Test_Images\ROI_2.png,99,50,153,206,1,0.5016553401947021,250,250
+ROI_3.png,C:\Users\mdhsi\OneDrive\Documents\Github\CMPE_258_Group_Project\TrainYourOwnYOLO\Data\Source_Images\Test_Images\ROI_3.png,83,44,160,211,1,0.29972413182258606,250,250
