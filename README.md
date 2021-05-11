@@ -1,5 +1,7 @@
 # CMPE_258_Group_Project
 
+**Note**: This is an older version of a project to do pose recognition using YOLO (You Only Look Once) model. The new version can be found [here](https://github.com/tajsandhu/CMPE_258_Group_Project).
+
 ## Setup
 #### YOLOv4 object detector
 Use [this linked README](https://github.com/hualili/opencv/blob/master/deep-learning-2020S/20-2021S-7c-%23README-yolo4-v2-yy-hl-2021-4-5%20(copy).txt) to setup and run pre-trained YOLOv4 in `tensorflow-yolov4-tflite-master`.
