@@ -1,6 +1,6 @@
 # CMPE_258_Group_Project
 
-**Note**: This is an older version of a project to do pose recognition using YOLO (You Only Look Once) model. The new version can be found [here](https://github.com/tajsandhu/CMPE_258_Group_Project).
+**Note**: This is an older version of a project to do pose recognition using YOLO (You Only Look Once) model. It is fully functional, but the new version can be found [here](https://github.com/tajsandhu/CMPE_258_Group_Project).
 
 ## Setup
 #### YOLOv4 object detector
